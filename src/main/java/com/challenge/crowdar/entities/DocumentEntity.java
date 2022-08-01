@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Entity
@@ -28,9 +29,11 @@ public class DocumentEntity {
     @Column(name = "DATE")
     private Date date;
 
+    @NotNull
     @Column(name = "TYPE_DOCUMENT")
     private String typeDocument;
 
+    @NotNull
     @Column(name = "OWNER_DOCUMENT")
     private String ownerDocument;
 
